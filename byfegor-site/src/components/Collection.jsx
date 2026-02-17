@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import "./collection.css";
-import image1 from "../collection/c-i-1.jpg";
-import image2 from "../collection/c-i-2.jpg";
-import image3 from "../collection/c-i-3.jpg";
-import image4 from "../collection/c-i-4.jpg";
+import image1 from "../collection-images/c-i-1.jpg";
+import image2 from "../collection-images/c-i-2.jpg";
+import image3 from "../collection-images/c-i-3.jpg";
+import image4 from "../collection-images/c-i-4.jpg";
 
 const catalougeItems = [
   {

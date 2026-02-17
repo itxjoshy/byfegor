@@ -15,7 +15,6 @@ function Modal({ modalopen, setIsModalOpen, selectedProduct }) {
             </div>
             <div className="product-description">
               <p>{selectedProduct.description}</p>
-              <p>Price: N{selectedProduct.price}</p>
               <button>Order On Whatsapp</button>
             </div>
           </>
