@@ -1,0 +1,48 @@
+.news {
+  color: #000000;
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+  background-color: #060606;
+}
+
+.news .marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: max-content;
+}
+
+.news .marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 18s linear infinite;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  padding-left: 100%;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

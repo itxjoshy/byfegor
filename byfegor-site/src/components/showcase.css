@@ -1,0 +1,10 @@
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.showcase img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  object-position: center;
+}
