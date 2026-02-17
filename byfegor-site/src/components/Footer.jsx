@@ -34,9 +34,6 @@ function Footer() {
                   <a href="#">About Us</a>
                 </li>
                 <li>
-                  <a href="#">Blog</a>
-                </li>
-                <li>
                   <a href="#">Careers</a>
                 </li>
               </ul>
