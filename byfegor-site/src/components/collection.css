@@ -69,6 +69,9 @@
   }
 }
 @media (max-width: 550px) {
+  .collection-section h2 {
+    font-size: 28px;
+  }
   .collection-items {
     display: flex;
     overflow-x: auto;
