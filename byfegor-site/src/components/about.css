@@ -40,3 +40,42 @@ div:has(> .about-section) {
   margin-bottom: 15px;
   line-height: 1.6;
 }
+/* media queries */
+@media (max-width: 768px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    background: fixed url(../assets/a-i-1.jpg) center / cover;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+  }
+
+  .about-section img {
+    display: none;
+  }
+
+  .about-text {
+    padding: 30px 0;
+    z-index: 2;
+  }
+
+  .about-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    margin-bottom: 10px;
+  }
+}

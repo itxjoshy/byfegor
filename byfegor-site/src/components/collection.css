@@ -34,11 +34,11 @@
 }
 
 .carousel-btn.prev {
-  left: -3.5rem;
+  left: -3rem;
 }
 
 .carousel-btn.next {
-  right: -3.5rem;
+  right: -3rem;
 }
 
 /* Optional: hide buttons on desktop */
