@@ -109,6 +109,10 @@
   .collection-section h2 {
     font-size: 28px;
     text-wrap: nowrap;
+    white-space: nowrap;
+    margin-left: -6px;
+    margin-bottom: 10px;
+    text-align: center;
   }
   .collection-items {
     display: flex;
