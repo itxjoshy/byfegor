@@ -4,7 +4,6 @@ function Menu({ isMenuOpen, toggleMenu }) {
   console.log(isMenuOpen);
   return (
     <div className={`menu ${isMenuOpen ? "open" : ""}`}>
-      <button onClick={() => toggleMenu()}>close</button>
       <nav>
         <ul>
           <li>
@@ -34,6 +33,19 @@ function Menu({ isMenuOpen, toggleMenu }) {
             <img
               src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
               alt="Instagram"
+              width="24"
+            />
+          </a>
+        </button>
+        <button className="insta">
+          <a
+            href="https://www.instagram.com/byfegor/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+              alt="WhatsApp"
               width="24"
             />
           </a>
