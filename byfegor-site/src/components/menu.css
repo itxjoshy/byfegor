@@ -10,6 +10,7 @@
   place-items: center;
   place-content: center;
   transition: top 0.3s ease-in-out;
+  z-index: 50;
 }
 .menu ul li {
   list-style: none;
