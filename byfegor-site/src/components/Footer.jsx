@@ -17,13 +17,10 @@ function Footer() {
               <h4>Shop</h4>
               <ul>
                 <li>
-                  <a href="#">New Arrivals</a>
+                  <a href="#catalogue">New Arrivals</a>
                 </li>
                 <li>
-                  <a href="#">Best Sellers</a>
-                </li>
-                <li>
-                  <a href="#">Sale</a>
+                  <a href="#catalogue">Best Sellers</a>
                 </li>
               </ul>
             </div>
@@ -31,10 +28,7 @@ function Footer() {
               <h4>Company</h4>
               <ul>
                 <li>
-                  <a href="#">About Us</a>
-                </li>
-                <li>
-                  <a href="#">Careers</a>
+                  <a href="#about">About Us</a>
                 </li>
               </ul>
             </div>

@@ -46,25 +46,43 @@ const catalougeItems = [
 function Collection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isAtStart, setIsAtStart] = useState(true);
+  const [isAtEnd, setIsAtEnd] = useState(false);
+
+  useEffect(() => {
+    const el = carouselRef.current;
+
+    const checkScroll = () => {
+      setIsAtStart(el.scrollLeft === 0);
+      setIsAtEnd(el.scrollLeft + el.offsetWidth >= el.scrollWidth - 5);
+    };
+
+    el.addEventListener("scroll", checkScroll);
+    checkScroll();
+
+    return () => el.removeEventListener("scroll", checkScroll);
+  }, []);
 
   const carouselRef = useRef(null);
+  const getScrollAmount = () => {
+    if (!carouselRef.current) return 0;
 
-  const scrollLeft = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: -carouselRef.current.offsetWidth,
-        behavior: "smooth",
-      });
-    }
+    const card = carouselRef.current.querySelector(".collection-item");
+    return card ? card.offsetWidth : 0;
   };
 
   const scrollRight = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: carouselRef.current.offsetWidth,
-        behavior: "smooth",
-      });
-    }
+    carouselRef.current?.scrollBy({
+      left: getScrollAmount(),
+      behavior: "smooth",
+    });
+  };
+
+  const scrollLeft = () => {
+    carouselRef.current?.scrollBy({
+      left: -getScrollAmount(),
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -129,14 +147,21 @@ function Collection() {
             </div>
 
             {/* Forward / Back Buttons */}
-            <div className="carousel-buttons">
-              <button className="carousel-btn prev" onClick={scrollLeft}>
-                ‹
-              </button>
-              <button className="carousel-btn next" onClick={scrollRight}>
-                ›
-              </button>
-            </div>
+            <button
+              className="carousel-btn prev"
+              onClick={scrollLeft}
+              disabled={isAtStart}
+            >
+              ‹
+            </button>
+
+            <button
+              className="carousel-btn next"
+              onClick={scrollRight}
+              disabled={isAtEnd}
+            >
+              ›
+            </button>
           </div>
         </div>
       </div>

@@ -58,7 +58,6 @@ function Hero() {
         <div class="hero-section-content">
           <h1>the contour collection</h1>
           <p>shop now for the latest in contour fashion.</p>
-          <button>shop now</button>
         </div>
       </main>
     </>
