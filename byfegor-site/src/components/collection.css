@@ -71,6 +71,7 @@
 @media (max-width: 550px) {
   .collection-section h2 {
     font-size: 28px;
+    text-wrap: nowrap;
   }
   .collection-items {
     display: flex;
