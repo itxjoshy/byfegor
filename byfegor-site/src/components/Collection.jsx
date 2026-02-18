@@ -20,6 +20,8 @@ const catalougeItems = [
     title: "KIM",
     description:
       " The perfect summer dress for summer girls. A flared dress adorned with delicate 3D flowers. Simple, yet effortlessly chic . Can be made long and short . Made to fit all sizes",
+    color: "Available in wide range of colors",
+
     image: image2,
   },
   {
@@ -35,6 +37,8 @@ const catalougeItems = [
     title: "BLOSSOM",
     description:
       "A floral masterpiece, hand-beaded to perfection. Designed with sculpted floral details and an inner corset for precise sizing, structure, and a flawless snatched fit. BLOSSOM is bold, artistic, and truly one of a kind.\n\nUnique. Limited. Unforgettable.\nPerfect for occasions, photoshoots, and moments that demand distinction.",
+    color: "Available in wide range of colors",
+
     image: image4,
   },
 ];

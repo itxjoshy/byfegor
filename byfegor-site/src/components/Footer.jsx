@@ -78,7 +78,7 @@ function Footer() {
             </a>
           </div>
           <div class="footer-bottom">
-            <p>&copy; 2026 Byfergoe Fashion. All rights reserved.</p>
+            <p>&copy; 2026 Byfergo Fashion. All rights reserved.</p>
           </div>
         </div>
       </div>

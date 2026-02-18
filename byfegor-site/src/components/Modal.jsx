@@ -10,11 +10,12 @@ function Modal({ modalopen, setIsModalOpen, selectedProduct }) {
         {selectedProduct && (
           <>
             <div className="image">
-              <h2>{selectedProduct.title}</h2>
               <img src={selectedProduct.image} alt={selectedProduct.title} />
             </div>
             <div className="product-description">
+              <h2>{selectedProduct.title}</h2>
               <p>{selectedProduct.description}</p>
+              <p>{selectedProduct.color}</p>
               <button>Order On Whatsapp</button>
             </div>
           </>

@@ -25,7 +25,13 @@ function Hero() {
           <img src={logo} alt="Logo" />
         </div>
         <div class="buttons">
-          <button class="search">I</button>
+          <button class="search">
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+              alt="Instagram"
+              width="24"
+            />
+          </button>
         </div>
       </header>
       <div class="hero-section-content">
