@@ -76,6 +76,8 @@ function Collection() {
                 </div>
               </div>
             ))}
+            <button class="prev">‹</button>
+            <button class="next">›</button>
           </div>
         </div>
       </div>
