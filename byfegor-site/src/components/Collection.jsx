@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Modal from "./Modal";
 import "./collection.css";
 import image1 from "../collection-images/c-i-1.jpg";
@@ -47,6 +47,26 @@ function Collection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+  const carouselRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: -carouselRef.current.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({
+        left: carouselRef.current.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       {isModalOpen && (
@@ -57,7 +77,7 @@ function Collection() {
         />
       )}
       <div className="container" id="catalogue">
-        <div className="collection-section">
+        {/* <div className="collection-section">
           <h2>Product Collection</h2>
           <div className="collection-items">
             {catalougeItems.map((product) => (
@@ -78,6 +98,45 @@ function Collection() {
             ))}
             <button class="prev">‹</button>
             <button class="next">›</button>
+          </div>
+        </div> */}
+        <div className="collection-section">
+          <h2>Product Collection</h2>
+
+          <div className="relative">
+            {/* Carousel Track */}
+            <div className="collection-items" ref={carouselRef}>
+              {catalougeItems.map((product, index) => (
+                <div
+                  key={product.id}
+                  id={`slide-${index}`}
+                  className="collection-item"
+                >
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    onClick={() => {
+                      setIsModalOpen(true);
+                      setSelectedProduct(product);
+                    }}
+                  />
+                  <div className="prod-cta">
+                    <h3>{product.title}</h3>
+                    <button>Order On Whatsapp</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Forward / Back Buttons */}
+            <div className="carousel-buttons">
+              <button className="carousel-btn prev" onClick={scrollLeft}>
+                ‹
+              </button>
+              <button className="carousel-btn next" onClick={scrollRight}>
+                ›
+              </button>
+            </div>
           </div>
         </div>
       </div>

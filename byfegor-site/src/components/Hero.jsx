@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
 import menuIcon from "../assets/menu-icon.svg";
 import closeMenuIcon from "../assets/close-menu-icon.svg";
@@ -9,6 +9,9 @@ function Hero() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+  }, [isMenuOpen]);
   return (
     <>
       <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />

@@ -10,10 +10,47 @@
   text-transform: uppercase;
   letter-spacing: -1px;
 }
+.relative {
+  position: relative;
+}
 .prev,
 .next {
   color: black;
-  display: none;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  font-size: 4rem;
+  cursor: pointer;
+  z-index: 10;
+  display: grid;
+  place-content: center;
+}
+
+.carousel-btn.prev {
+  left: -3.5rem;
+}
+
+.carousel-btn.next {
+  right: -3.5rem;
+}
+
+/* Optional: hide buttons on desktop */
+@media (min-width: 768px) {
+  .carousel-btn {
+    display: none;
+  }
+
+  .carousel-track {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
 }
 .collection-items {
   display: grid;

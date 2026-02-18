@@ -1,9 +1,6 @@
 import React from "react";
 import "./menu.css";
 function Menu({ isMenuOpen, toggleMenu }) {
-  isMenuOpen
-    ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "auto");
   return (
     <div className={`menu ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
       <nav onClick={(e) => e.stopPropagation()}>
