@@ -1,0 +1,14 @@
+.menu {
+  top: -100vh;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(25, 25, 25, 0.458);
+  width: 100%;
+  transition: top 0.3s ease-in-out;
+}
+
+.menu.open {
+  top: 0;
+
+  transition: top 0.3s ease-in-out;
+}

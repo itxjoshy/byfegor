@@ -8,6 +8,9 @@
   font-weight: 12px;
   font-family: "Poppins", sans-serif;
 }
+.menu-icon {
+  display: none;
+}
 header {
   background: rgb(255, 255, 255);
   color: white;
@@ -41,13 +44,10 @@ header .buttons {
   justify-content: end;
   gap: 5px;
 }
-header .buttons button {
+header .buttons .insta {
   background-color: #000000;
   border: none;
-  color: white;
   padding: 10px;
-  text-align: center;
-  text-decoration: none;
   width: 35px;
   height: 35px;
   cursor: pointer;
@@ -101,4 +101,47 @@ header .buttons button {
   color: rgb(255, 255, 255);
   font-size: 1rem;
   border: none;
+}
+/* media queries */
+@media (max-width: 768px) {
+  header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    & > :nth-child(1) {
+      display: none;
+    }
+    .buttons .insta {
+      display: none;
+    }
+    .menu-icon {
+      display: initial;
+    }
+  }
+  .tag {
+    display: none;
+  }
+  .hero-section {
+    display: flex;
+    background-position: 70%;
+  }
+  .hero-section-content {
+    display: flex;
+    padding: 20px;
+    height: 100dvh;
+    padding-bottom: 5rem;
+    max-width: 100%;
+  }
+  .hero-section-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section-content button {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
 }
