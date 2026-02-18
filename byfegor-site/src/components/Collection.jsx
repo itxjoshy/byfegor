@@ -56,7 +56,7 @@ function Collection() {
           selectedProduct={selectedProduct}
         />
       )}
-      <div className="container">
+      <div className="container" id="catalogue">
         <div className="collection-section">
           <h2>Product Collection</h2>
           <div className="collection-items">

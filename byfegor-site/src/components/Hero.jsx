@@ -5,19 +5,19 @@ function Hero() {
   return (
     <main class="hero-section">
       <div class="tag">
-        <p>World wide shipping with DHL🌎</p>
+        <p>World wide shipping with DHL 🌎</p>
       </div>
       <header>
         <nav>
           <ul>
             <li>
-              <a href="">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="">catalouge</a>
+              <a href="#catalogue">catalouge</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a href="#about">About</a>
             </li>
           </ul>
         </nav>
@@ -26,11 +26,17 @@ function Hero() {
         </div>
         <div class="buttons">
           <button class="search">
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-              alt="Instagram"
-              width="24"
-            />
+            <a
+              href="https://www.instagram.com/byfegor/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+                alt="Instagram"
+                width="24"
+              />
+            </a>
           </button>
         </div>
       </header>
