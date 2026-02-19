@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./modal.css";
 function Modal({ modalopen, setIsModalOpen, selectedProduct }) {
+  useEffect(() => {
+    document.body.style.overflow = modalopen ? "hidden" : "auto";
+  }, [modalopen]);
   return (
     <div
       className={`modal-container ${modalopen ? "open" : ""}`}
