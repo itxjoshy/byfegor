@@ -62,6 +62,9 @@ function Collection() {
 
     return () => el.removeEventListener("scroll", checkScroll);
   }, []);
+  useEffect(() => {
+    document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+  }, [isModalOpen]);
 
   const carouselRef = useRef(null);
 

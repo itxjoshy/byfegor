@@ -12,6 +12,7 @@ function Hero() {
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
   }, [isMenuOpen]);
+
   return (
     <>
       <Menu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
