@@ -64,6 +64,7 @@
 @media (max-width: 768px) {
   .modal-container {
     padding: 1.5rem;
+    height: 70dvh;
   }
   .modal-content {
     flex-direction: column;
