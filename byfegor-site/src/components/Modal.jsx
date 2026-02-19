@@ -18,7 +18,18 @@ function Modal({ modalopen, setIsModalOpen, selectedProduct }) {
               <h2>{selectedProduct.title}</h2>
               <p>{selectedProduct.description}</p>
               <p>{selectedProduct.color}</p>
-              <button>Order On Whatsapp</button>
+              <button
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/23480120195744?text=${encodeURIComponent(
+                      `Hello, I want to order the ${product.title}, can I get more information please?`,
+                    )}`,
+                    "_blank",
+                  )
+                }
+              >
+                Order On Whatsapp
+              </button>
             </div>
           </>
         )}
