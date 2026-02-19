@@ -58,3 +58,11 @@
     }
   }
 }
+
+/* media queries */
+
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+  }
+}

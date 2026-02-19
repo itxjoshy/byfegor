@@ -64,26 +64,6 @@ function Collection() {
   }, []);
 
   const carouselRef = useRef(null);
-  const getScrollAmount = () => {
-    if (!carouselRef.current) return 0;
-
-    const card = carouselRef.current.querySelector(".collection-item");
-    return card ? card.offsetWidth : 0;
-  };
-
-  const scrollRight = () => {
-    carouselRef.current?.scrollBy({
-      left: getScrollAmount(),
-      behavior: "smooth",
-    });
-  };
-
-  const scrollLeft = () => {
-    carouselRef.current?.scrollBy({
-      left: -getScrollAmount(),
-      behavior: "smooth",
-    });
-  };
 
   return (
     <>
@@ -95,29 +75,6 @@ function Collection() {
         />
       )}
       <div className="container" id="catalogue">
-        {/* <div className="collection-section">
-          <h2>Product Collection</h2>
-          <div className="collection-items">
-            {catalougeItems.map((product) => (
-              <div key={product.id} className="collection-item">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  onClick={() => {
-                    setIsModalOpen(true);
-                    setSelectedProduct(product);
-                  }}
-                />
-                <div className="prod-cta">
-                  <h3>{product.title}</h3>
-                  <button>Order On Whatsapp</button>
-                </div>
-              </div>
-            ))}
-            <button class="prev">‹</button>
-            <button class="next">›</button>
-          </div>
-        </div> */}
         <div className="collection-section">
           <h2>Product Collection</h2>
 
@@ -145,23 +102,6 @@ function Collection() {
                 </div>
               ))}
             </div>
-
-            {/* Forward / Back Buttons */}
-            <button
-              className="carousel-btn prev"
-              onClick={scrollLeft}
-              disabled={isAtStart}
-            >
-              ‹
-            </button>
-
-            <button
-              className="carousel-btn next"
-              onClick={scrollRight}
-              disabled={isAtEnd}
-            >
-              ›
-            </button>
           </div>
         </div>
       </div>

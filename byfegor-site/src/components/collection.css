@@ -1,7 +1,13 @@
 .collection-section {
-  padding: 50px 3rem;
+  padding: 50px 0;
+
   background-color: #f4f4f4;
+  overflow: hidden;
 }
+.relative {
+  position: relative;
+}
+
 .collection-section h2 {
   text-align: center;
   margin-bottom: 40px;
@@ -10,48 +16,7 @@
   text-transform: uppercase;
   letter-spacing: -1px;
 }
-.relative {
-  position: relative;
-}
-.prev,
-.next {
-  color: black;
-}
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  color: rgb(0, 0, 0);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
-  font-size: 4rem;
-  cursor: pointer;
-  z-index: 10;
-  display: grid;
-  place-content: center;
-}
 
-.carousel-btn.prev {
-  left: -3rem;
-}
-
-.carousel-btn.next {
-  right: -3rem;
-}
-
-/* Optional: hide buttons on desktop */
-@media (min-width: 768px) {
-  .carousel-btn {
-    display: none;
-  }
-
-  .carousel-track {
-    flex-wrap: wrap;
-    overflow: visible;
-  }
-}
 .collection-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -114,19 +79,33 @@
     margin-bottom: 10px;
     text-align: center;
   }
+  .collection-section {
+    padding: 50px 0 2rem 1rem;
+    overflow: hidden;
+  }
+
   .collection-items {
     display: flex;
     overflow-x: auto;
+    gap: 16px;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
 
-    -webkit-overflow-scrolling: touch; /* iOS smooth */
-  }
   .collection-items::-webkit-scrollbar {
-    display: none; /* optional */
+    display: none;
   }
+
   .collection-item {
-    flex: 0 0 100%;
+    flex: 0 0 90%;
     scroll-snap-align: start;
+  }
+
+  .collection-item:first-child {
+    margin-left: 1.5rem; /* or 3rem for desktop spacing */
+  }
+
+  .collection-item:last-child {
+    margin-right: 1.5rem;
   }
 }
