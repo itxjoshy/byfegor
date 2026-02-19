@@ -22,7 +22,7 @@ function Modal({ modalopen, setIsModalOpen, selectedProduct }) {
                 onClick={() =>
                   window.open(
                     `https://wa.me/23480120195744?text=${encodeURIComponent(
-                      `Hello, I want to order the ${product.title}, can I get more information please?`,
+                      `Hello, I want to order the ${selectedProduct.title}, can I get more information please?`,
                     )}`,
                     "_blank",
                   )
