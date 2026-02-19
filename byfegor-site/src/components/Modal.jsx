@@ -21,8 +21,9 @@ function Modal({ modalopen, setIsModalOpen, selectedProduct }) {
               <button
                 onClick={() =>
                   window.open(
-                    `https://wa.me/23480120195744?text=${encodeURIComponent(
-                      `Hello, I want to order the ${selectedProduct.title}, can I get more information please?`,
+                    `https://wa.me/2348132118998?text=${encodeURIComponent(
+                      `Hello, I'm interested in the ${selectedProduct.title}.
+I found it on your website and would love to place an order.`,
                     )}`,
                     "_blank",
                   )
