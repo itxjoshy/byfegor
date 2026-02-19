@@ -18,6 +18,9 @@
   color: white;
   padding: 0.5rem 0.8rem;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modal-content {
   background-color: white;
