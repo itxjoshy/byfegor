@@ -62,6 +62,9 @@
 /* media queries */
 
 @media (max-width: 768px) {
+  .modal-container {
+    padding: 1.5rem;
+  }
   .modal-content {
     flex-direction: column;
   }
