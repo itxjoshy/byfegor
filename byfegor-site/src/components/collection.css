@@ -109,3 +109,8 @@
     margin-right: 1.5rem;
   }
 }
+@media screen and (max-width: 1350px) {
+  .collection-section {
+    padding: 50px 2rem;
+  }
+}
