@@ -36,7 +36,7 @@ const catalougeItems = [
     id: 4,
     title: "BLOSSOM",
     description:
-      "A floral masterpiece, hand-beaded to perfection. Designed with sculpted floral details and an inner corset for precise sizing, structure, and a flawless snatched fit. BLOSSOM is bold, artistic, and truly one of a kind.\n\nUnique. Limited. Unforgettable.\nPerfect for occasions, photoshoots, and moments that demand distinction.",
+      "A floral masterpiece, hand-beaded to perfection. Designed with sculpted floral details and an inner corset for precise sizing, structure, and a flawless snatched fit.Unique. Limited. Unforgettable. Perfect for occasions, photoshoots, and moments that demand distinction.",
     color: "Available in wide range of colors",
 
     image: image4,

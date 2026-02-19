@@ -6,6 +6,11 @@ function Modal({ modalopen, setIsModalOpen, selectedProduct }) {
       onClick={() => setIsModalOpen(false)}
     >
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <button>
+          <span className="close-icon" onClick={() => setIsModalOpen(false)}>
+            &times;
+          </span>
+        </button>
         {selectedProduct && (
           <>
             <div className="image">
