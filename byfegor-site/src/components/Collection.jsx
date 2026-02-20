@@ -103,7 +103,7 @@ function Collection() {
                     <button
                       onClick={() =>
                         window.open(
-                          `https://wa.me/23408132118998?text=${encodeURIComponent(
+                          `https://wa.me/2349123675608?text=${encodeURIComponent(
                             `Hello, I'm interested in the ${product.title}.
 I found it on your website and would love to place an order.`,
                           )}`,
